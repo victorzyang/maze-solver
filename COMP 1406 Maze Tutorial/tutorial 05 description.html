@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="Author" content="Louis Nel">
+  <meta name="GENERATOR"
+ content="Microsoft FrontPage 5.0">
+  <title>index</title>
+</head>
+<body>
+<small><b><font size="+4"><small><span style="color: rgb(0, 153, 0);">Tutorial&nbsp;
+5) Amazing<br style="color: rgb(0, 153, 0);">
+</span><small style="color: rgb(0, 153, 0);">week: February 9-13</small><br>
+</small></font></b></small>
+<hr width="100%"><big><b><span style="color: rgb(0, 153, 0);">Description</span><o:p></o:p></b></big><big><br>
+The purpose of this exercise is to
+get practice solving a problem using recursion. Again what makes this
+tutorial
+challenging is that there is way too much code to examine all of it, and you need to understand how to solve problems&nbsp; using recursion
+to complete this tutorial. <span style="color: rgb(255, 0, 0);">You
+will not be able to read
+and understand all the code provided&nbsp; in the time allocated for
+the tutorial.</span><br>
+</big>
+<p class="MsoNormal" style=""><big>The demonstration program produces a
+maze that consists of cells. The black cells are walls and the pink
+cells are cells you can travel along. The red cell in the upper left is
+the starting location and the blue cell in the lower right is the
+finish location. Each time the game opens the maze looks different,
+however you can&nbsp; toggle cells between being walls, or not, by
+clicking on them with your mouse</big><big>. <br>
+</big></p>
+<img alt="" src="maze_before.jpg" style="width: 640px; height: 480px;"><br>
+<big><br>
+The game has a solve button. When the solve button is pressed a path
+from the start cell to the finish cell must be found, if one exists,
+and shown in green. If no path is possible nothing gets shown. The path
+does not have to be a shortest path, just any set of adjacent cells
+that connects the start to the finish. Compile and run the <span
+ style="font-family: monospace;">MazeGame </span>class, which has the <span
+ style="font-family: monospace;">main()</span> method.<br>
+&nbsp;<br>
+<img alt="" src="maze_after.jpg" style="width: 640px; height: 480px;"><br>
+<br>
+Currently when the <span style="font-family: monospace;">Solve </span>button
+is pressed it invokes a <span style="font-family: monospace;">solve()</span>
+method in the <span style="font-family: monospace;">Maze </span>class.
+The <span style="font-family: monospace;">solve()</span> method in
+turn invokes the <span style="font-family: monospace;">findPathFrom(Cell
+aCell)</span> method. This is the method you need to write. It needs to
+recursively find a path from <span style="font-family: monospace;">aCell</span>
+to the <span style="font-family: monospace;">finish </span>location.
+The comments in this recursive method explains the strategy for how to
+solve the problem. You will not need to modify any of the other code.
+In fact, the only code you will need to even look at is the <span
+ style="font-family: monospace;">Maze </span>class and the <span
+ style="font-family: monospace;">Cell </span>class.&nbsp; Of course
+you can explore the rest of the code to see how it works if you want. <br>
+<br>
+Here are some specific suggestions for writing the <span
+ style="font-family: monospace;">findPathFrom(Cell aCell)</span> method.<br>
+</big><big><br>
+</big><big><big style="font-weight: bold;"><span
+ style="color: rgb(0, 153, 0);">Specific Requirements and Suggestions</span></big><b><br>
+</b></big>
+<p class="MsoNormal" style=""><big>Look at the comments in the Maze
+class's&nbsp; <span style="font-family: monospace;">findPathFrom(Cell
+aCell)</span> method. They explain the recursion strategy for solving
+the problem and show where the missing code goes. <br>
+The basic strategy is as follows. Start at the starting cell and mark it as visited, 
+then find any of
+its neighbouring cells that have not yet been visited. If a path can be
+found from that neighbour to the finish&nbsp; set the&nbsp; neighbour
+to be in the route and&nbsp; return <font face="Courier New">true</font> (meaning we found a path).&nbsp;
+Otherwise try again from one of the other&nbsp; unvisited neigbours. If
+no path from any of these neigbours can be found, then none exists and
+you should return <font face="Courier New">false</font>. <br>
+</big></p>
+<p class="MsoNormal" style=""><big>Remember, when doing recursion a
+method must call itself, but on a smaller problem, and this will
+continue until a basis case problem is encountered. In this exercise
+the problem gets smaller by marking cells as "visited". So the number
+of unvisited cells really defines the current size of the sub-problem.<br>
+</big></p>
+<big>The <span style="font-family: monospace;">Cell </span>class
+provides a method<span style="font-family: monospace;"> visit()</span>
+for marking a cell as "visited".<br>
+<br>
+<br>
+The <span style="font-family: monospace;">Cell </span>class provides
+a method <span style="font-family: monospace;">setInRoute()</span>
+which should be called if you want a cell to be in the path. This
+will automatically cause that cell to be drawn in green when the window
+is redrawn.</big>
+<p class="MsoNormal" style=""><big>The <span
+ style="font-family: monospace;">Cell </span>class provides a method <span
+ style="font-family: monospace;">getAnUnvisitedNeighbour()</span> that
+will return, for any cell, an adjacent neighbour that has not yet been
+visited.</big><big></big><big><span style="font-weight: bold;"></span><br>
+</big></p>
+<br>
+<p class="MsoNormal" style=""><big style="color: rgb(255, 0, 0);">Demonstrate
+to the tutorial TA
+that you have completed
+these requirements. (You need to demonstrate your tutorials results to
+the TA
+to get credit for the tutorial.</big><span
+ style="color: rgb(255, 0, 0);">
+</span><br>
+<br>
+</p>
+</body>
+</html>
